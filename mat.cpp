@@ -16,8 +16,10 @@ namespace ariel{
             throw invalid_argument("Error, please enter odd numbers");
         }
 
+        // magic numbers
         const int max = 126;
         const int min = 33;
+
         if(char1<min || char1>max || char2<min || char2>max){
             throw invalid_argument("Error, wrong char input");
         }
@@ -53,6 +55,10 @@ namespace ariel{
             indexR-=2;
         }
 
+        /* in order to print the matrix I created a main string and a temporary string,
+         * each row I entered the row to the temp string, adding the char '\n' at the end, and adding the
+         * temp string to the main string that I return as answer
+         */
         string out;
         for(int i=0; i<x2; i++){
             string temp;
@@ -64,12 +70,4 @@ namespace ariel{
         }
         return out;
     }
-
-
 }
-
-// int main(){
-//     ariel::mat(9, 7, '*', '-');
-//
-//     return 1;
-// }
