@@ -12,6 +12,7 @@ int main() {
     int col;
     char c1;
     char c2;
+
     cout << "Please enter positive odd row number" << endl;
     cin >> row;
     cout << "Please enter positive odd column number" << endl;
@@ -21,7 +22,14 @@ int main() {
     cout << "Please enter second char" << endl;
     cin >> c2;
 
-    cout << mat(col, row, c1, c2);
+    try{
+        cout << mat(col, row, c1, c2);
+    }
+
+    catch(exception& ex){
+        cout << "Wrong input, "  << ex.what() << endl;
+    }
+
 
     return 0;
 }
